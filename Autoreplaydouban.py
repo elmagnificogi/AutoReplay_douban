@@ -4,6 +4,7 @@ import re
 from lxml import html
 import requests
 from PIL import Image
+import os,sys
 
 def main():
     db_urls = [
@@ -17,7 +18,7 @@ def main():
         ]
 
 
-    db_url = "https://www.douban.com/group/topic/141006630/"
+    db_url = "https://www.douban.com/group/topic/141002674/"
     Cookie = 'bid=b16kx11APXM; ll="118282"; douban-fav-remind=1; douban-profile-remind=1; ct=y; _ga=GA1.2.2116562073.1558235896; _gid=GA1.2.1026987747.1558254879; _pk_ref.100001.8cb4=%5B%22%22%2C%22%22%2C1558265006%2C%22https%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3D57aywD0Q6WTnl7XKbIHuE8zWE5epzov3Jk7LtVUL7clOAGuZmUBS-a-MNTzYiTmfD2AoTT8mx1my6hYutqi9ia%26wd%3D%26eqid%3Dbfe569310000a652000000065ce0caec%22%5D; ps=y; ap_v=0,6.0; dbcl2="164776595:eNdVT94l/C8"; ck=OLvw; _pk_id.100001.8cb4=cc09238f4c125f7c.1558235895.5.1558275428.1558256275.; _pk_ses.100001.8cb4=*; push_noty_num=0; push_doumail_num=0; __utma=30149280.2116562073.1558235896.1558251801.1558265006.5; __utmb=30149280.500.9.1558267190533; __utmc=30149280; __utmz=30149280.1558235896.1.1.utmcsr=baidu|utmccn=(organic)|utmcmd=organic; __utmv=30149280.16477'
     replay_comment = "up"
 
@@ -69,8 +70,10 @@ def main():
                 ,'Referer': captcha_image[0]}
             f.write(requests.get(captcha_image[0],headers=header).content)
             print("%s下载完成" % filename)
-            img=Image.open(filename)
-            img.show()
+        print(os.path.dirname(os.path.realpath(__file__))+ r'\\' + filename)
+        img=Image.open(os.path.dirname(os.path.realpath(__file__)) +r'\\' +filename)
+        img.show()
+        captcha_veryfy = input("输入验证码:").replace('\n', '').replace('\n', '')
         # urllib.request.urlretrieve(requests.get(i,headers=header), "%s%s%s.jpg" % (dir, image_title, num))
 
     else:
