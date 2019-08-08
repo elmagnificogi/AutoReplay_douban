@@ -51,3 +51,9 @@ https://jingyan.baidu.com/article/5d368d1ea6c6e33f60c057ef.html
 #### TODO
 
 额，房子租出去了，不知道啥时候还会更新一下这个
+
+
+
+原作者换了实现方式，总算给了代码，我基本就不再会更新了
+
+https://github.com/gangfang/robo-commenter-for-douban
