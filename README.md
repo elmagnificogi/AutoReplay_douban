@@ -1,4 +1,16 @@
 # 豆瓣自动回复/刷帖器
+
+
+
+## 更新 2021.4.14
+
+- 增加超级鹰验证码接口，可以自动回帖了
+- 后续不再更新，合并到我的小工具里去了
+
+> https://github.com/elmagnificogi/MyTools
+
+
+
 #### 现状
 
 无论是咸鱼也好，58也好（赶集也是58的），租房信息基本都沦陷了。
@@ -57,3 +69,4 @@ https://jingyan.baidu.com/article/5d368d1ea6c6e33f60c057ef.html
 原作者换了实现方式，总算给了代码，我基本就不再会更新了
 
 https://github.com/gangfang/robo-commenter-for-douban
+
